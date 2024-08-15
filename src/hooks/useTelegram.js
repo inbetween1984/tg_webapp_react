@@ -1,6 +1,4 @@
-import {useContext} from "react";
-
-const tg = window.Telegram.WebApp;
+    const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
 
