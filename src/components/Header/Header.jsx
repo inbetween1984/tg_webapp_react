@@ -8,9 +8,15 @@ const Header = () => {
     return (
         <div className={"header"}>
             <Button onClick={onClose}>Закрыть</Button>
-            <span className={'username'}>
-                {user?.username}
-            </span>
+            {user ? (
+                <span className={'username'}>
+                    {user.username}
+                </span>
+            ) : (
+                <span className={'username'}>
+                    Пользователь не найден
+                </span>
+            )}
         </div>
     );
 };
