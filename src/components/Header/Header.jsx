@@ -1,22 +1,17 @@
+import React from 'react';
 import Button from "../Button/Button";
-import {useTelegram} from "../../hooks/useTelegram";
+import {useTelegram} from '../../hooks/useTelegram';
+import './Header.css';
 
 const Header = () => {
-
     const {user, onClose} = useTelegram();
 
     return (
-        <div className={"header"}>
+        <div className={'header'}>
             <Button onClick={onClose}>Закрыть</Button>
-            {user ? (
-                <span className={'username'}>
-                    {user.username}
-                </span>
-            ) : (
-                <span className={'username'}>
-                    Пользователь не найден
-                </span>
-            )}
+            <span className={'username'}>
+                {user?.username}
+            </span>
         </div>
     );
 };
